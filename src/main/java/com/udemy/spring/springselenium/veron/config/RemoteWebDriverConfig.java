@@ -33,10 +33,10 @@ public class RemoteWebDriverConfig {
         EdgeOptions edgeOptions = new EdgeOptions();
         edgeOptions.setCapability("browserName", "MicrosoftEdge");
         edgeOptions.setCapability("browserVersion", "latest");
-        edgeOptions.setCapability("selenoid:options", Map.<String, Object>of(
-                "enableVNC", true,
-                "enableVideo", true
-        ));
+//        edgeOptions.setCapability("selenoid:options", Map.<String, Object>of(
+//                "enableVNC", true,
+//                "enableVideo", true
+//        ));
         if(mode){
             edgeOptions.setHeadless(true);
         }
@@ -49,10 +49,11 @@ public class RemoteWebDriverConfig {
         ChromeOptions chromeOptions = new ChromeOptions();
         chromeOptions.setCapability("browserName", "chrome");
         chromeOptions.setCapability("browserVersion", "96.0");
-        chromeOptions.setCapability("selenoid:options", Map.<String, Object>of(
-                "enableVNC", true,
-                "enableVideo", true
-        ));
+        chromeOptions.setCapability("se.vncEnabled", true);
+//        chromeOptions.setCapability("selenoid:options", Map.<String, Object>of(
+//                "enableVNC", true,
+//                "enableVideo", true
+//        ));
         if(mode){
             chromeOptions.setHeadless(true);
         }

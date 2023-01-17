@@ -13,14 +13,24 @@ public class JuniorSeniorTest extends SpringBaseTestNGTest {
     private JuniorEng junior;
 
     @Autowired
-    private SeniorEng senior;
+    private Salary salary;
+
 
     @Test
-    public void scopeTest(){
-        this.junior.setAmount(100);
-        System.out.println("Junior:: " + junior.getSalary().getAmount());
-        this.senior.setAmount(200);
-        System.out.println("Senior:: " + senior.getSalary().getAmount());
-        System.out.println("Junior:: " + junior.getSalary().getAmount());
+    public void scopeTest() {
+        System.out.println("Before invocation");
+        salary.setAmount(100);
+        junior.setSalary(this.salary);
+        System.out.println(junior);
+        System.out.println(salary.getAmount());
+        salary.setAmount(200);
     }
+
+    @Test
+    public void scopeTest2() {
+        salary.setAmount(300);
+        junior.setSalary(salary);
+        System.out.println(junior);
+    }
+
 }

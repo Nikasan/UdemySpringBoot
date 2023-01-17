@@ -12,13 +12,4 @@ import org.testng.annotations.BeforeTest;
  */
 @SpringBootTest
 public class SpringBaseTestNGTest extends AbstractTestNGSpringContextTests {
-
-    @Value("${threads}")
-    private int threads;
-
-    @BeforeSuite
-    public void beforeTestClass(){
-        System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
-        System.out.println(" @BeforeTestClass " + threads + " threads");
-    }
 }
