@@ -1,6 +1,9 @@
 package com.udemy.spring.springselenium.scope;
 
+<<<<<<< HEAD
 import org.springframework.context.annotation.Lazy;
+=======
+>>>>>>> 327af98ac7253cda78c5e7b81d648e9fc23538aa
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
@@ -11,14 +14,18 @@ import org.springframework.stereotype.Component;
 @Scope("prototype")
 public class Salary {
 
+<<<<<<< HEAD
     Salary(){
         System.out.println("Salary constructor");
     }
 
+=======
+>>>>>>> 327af98ac7253cda78c5e7b81d648e9fc23538aa
     public int getAmount() {
         return amount;
     }
 
+<<<<<<< HEAD
     private int amount;
 
     @Override
@@ -28,8 +35,15 @@ public class Salary {
                 '}';
     }
 
+=======
+>>>>>>> 327af98ac7253cda78c5e7b81d648e9fc23538aa
     public void setAmount(int amount) {
         this.amount = amount;
     }
 
+<<<<<<< HEAD
+=======
+    private int amount;
+
+>>>>>>> 327af98ac7253cda78c5e7b81d648e9fc23538aa
 }

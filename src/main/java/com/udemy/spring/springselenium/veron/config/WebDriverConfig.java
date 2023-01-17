@@ -6,7 +6,10 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+<<<<<<< HEAD
 import org.openqa.selenium.chromium.ChromiumOptions;
+=======
+>>>>>>> 327af98ac7253cda78c5e7b81d648e9fc23538aa
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
 import org.springframework.beans.factory.annotation.Value;
@@ -35,8 +38,12 @@ public class WebDriverConfig {
         if(mode){
             edgeOptions.setHeadless(true);
         }
+<<<<<<< HEAD
         edgeOptions.addArguments("--start-maximized");
         return new EdgeDriver(edgeOptions);
+=======
+        return new EdgeDriver();
+>>>>>>> 327af98ac7253cda78c5e7b81d648e9fc23538aa
     }
 
     @ThreadScopeBean
@@ -48,8 +55,15 @@ public class WebDriverConfig {
         if(mode){
             options.setHeadless(true);
         }
+<<<<<<< HEAD
         options.addArguments("--start-maximized");
         return new ChromeDriver(options);
     }
 
+=======
+        System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+        System.out.println(" Started " + threads + " threads");
+        return new ChromeDriver(options);
+    }
+>>>>>>> 327af98ac7253cda78c5e7b81d648e9fc23538aa
 }

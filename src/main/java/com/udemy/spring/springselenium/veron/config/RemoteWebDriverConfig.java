@@ -33,10 +33,17 @@ public class RemoteWebDriverConfig {
         EdgeOptions edgeOptions = new EdgeOptions();
         edgeOptions.setCapability("browserName", "MicrosoftEdge");
         edgeOptions.setCapability("browserVersion", "latest");
+<<<<<<< HEAD
 //        edgeOptions.setCapability("selenoid:options", Map.<String, Object>of(
 //                "enableVNC", true,
 //                "enableVideo", true
 //        ));
+=======
+        edgeOptions.setCapability("selenoid:options", Map.<String, Object>of(
+                "enableVNC", true,
+                "enableVideo", true
+        ));
+>>>>>>> 327af98ac7253cda78c5e7b81d648e9fc23538aa
         if(mode){
             edgeOptions.setHeadless(true);
         }
@@ -49,6 +56,7 @@ public class RemoteWebDriverConfig {
         ChromeOptions chromeOptions = new ChromeOptions();
         chromeOptions.setCapability("browserName", "chrome");
         chromeOptions.setCapability("browserVersion", "96.0");
+<<<<<<< HEAD
         chromeOptions.setCapability("se.vncEnabled", true);
 //        chromeOptions.setCapability("selenoid:options", Map.<String, Object>of(
 //                "enableVNC", true,
@@ -58,6 +66,15 @@ public class RemoteWebDriverConfig {
             chromeOptions.setHeadless(true);
         }
         chromeOptions.addArguments("--start-maximized");
+=======
+        chromeOptions.setCapability("selenoid:options", Map.<String, Object>of(
+                "enableVNC", true,
+                "enableVideo", true
+        ));
+        if(mode){
+            chromeOptions.setHeadless(true);
+        }
+>>>>>>> 327af98ac7253cda78c5e7b81d648e9fc23538aa
         return new RemoteWebDriver(this.url, chromeOptions);
     }
 }

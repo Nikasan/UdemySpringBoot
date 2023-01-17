@@ -13,6 +13,7 @@ public class JuniorSeniorTest extends SpringBaseTestNGTest {
     private JuniorEng junior;
 
     @Autowired
+<<<<<<< HEAD
     private Salary salary;
 
 
@@ -33,4 +34,16 @@ public class JuniorSeniorTest extends SpringBaseTestNGTest {
         System.out.println(junior);
     }
 
+=======
+    private SeniorEng senior;
+
+    @Test
+    public void scopeTest(){
+        this.junior.setAmount(100);
+        System.out.println("Junior:: " + junior.getSalary().getAmount());
+        this.senior.setAmount(200);
+        System.out.println("Senior:: " + senior.getSalary().getAmount());
+        System.out.println("Junior:: " + junior.getSalary().getAmount());
+    }
+>>>>>>> 327af98ac7253cda78c5e7b81d648e9fc23538aa
 }

@@ -36,9 +36,12 @@ mvn clean test -D spring.profiles.active=qa,remote -D browser=edge
 Для корректнй работы потоков, надо использовать Thread Scope, вместо prototype, singleton
 Минус- закрытие доайвера прерывает весь поток. Не подойдет, если в тесте надо 2 раза создавать(открывать) браузер
 
+<<<<<<< HEAD
 mvn clean compile test -D spring.profiles.active=qa -D browser=chrome -D surefire.suiteXmlFile -D surefire.threadCo
 unt=threads
 
 
+=======
+>>>>>>> 327af98ac7253cda78c5e7b81d648e9fc23538aa
 
 
